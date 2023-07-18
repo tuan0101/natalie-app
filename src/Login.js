@@ -9,7 +9,7 @@ const Login = () => {
     };
 
     return (
-        <div className="login-form">
+        <div>
             <div className="card">
             <div class="bg"></div>
   <div class="blob"></div>
@@ -31,6 +31,16 @@ const Login = () => {
                             <span>Show my gift</span></button>
 
                     </div>
+
+                    <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/VsTZikuF7V8"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
                 
 
             </div>
