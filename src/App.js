@@ -6,7 +6,7 @@ import Gift from './Gift';
 function App() {
   return (
     <div className="App">
-      <Gift />
+      <Login />
 
     </div>
   );
