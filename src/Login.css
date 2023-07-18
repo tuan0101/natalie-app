@@ -1,22 +1,51 @@
 body {
-    background-image: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1124&q=100');
     background-position: center;
+    background-image: url('../src/images/hellokitty4.jpg'); 
+    /* background-size: cover; */
+    background-repeat: repeat;
+    
 }
-
+body::before {
+    content: "";
+    display: block;
+    -webkit-filter: blur(1px) brightness(0.5);
+    -moz-filter: blur(1px) brightness(0.5);
+    -ms-filter: blur(1px) brightness(0.5);
+    -o-filter: blur(1px) brightness(0.5);
+    filter: blur(1px) brightness(0.5);
+    position: absolute;
+    left: .1px;
+    top: .1px;
+    right: .1px;
+    bottom: .1px;
+    background: inherit;
+    z-index: 0;
+  }
 /* Glassmorphism card effect */
 .card {
     backdrop-filter: blur(16px) saturate(180%);
     -webkit-backdrop-filter: blur(16px) saturate(180%);
     background-color: rgba(255, 255, 255, 0.50);
-    border-radius: 12px;
+    border-radius: 20px;
     border: 1px solid rgba(209, 213, 219, 0.3);
     width: 400px;
-    height: auto;
+    height: 300px;
     padding: 2rem;
     margin-top: 100px;
 
     margin-left: auto;
     margin-right: auto;
+    transition: all .3s;
+
+    z-index: 1111;
+    overflow: hidden;
+    flex-direction: column;
+}
+
+
+
+.card:hover {
+    box-shadow: 0px 0px 30px 10px rgba(0, 255, 117, 0.30);
 }
 
 .card-title {
@@ -65,80 +94,80 @@ button {
     z-index: 0;
     overflow: hidden;
     transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
-  }
-  
-  button span {
+}
+
+button span {
     color: #164ca7;
     font-size: 14px;
     font-weight: 500;
     letter-spacing: 0.7px;
-  }
-  
-  button:hover {
+}
+
+button:hover {
     animation: rotate624 0.7s ease-in-out both;
-  }
-  
-  button:hover span {
+}
+
+button:hover span {
     animation: storm1261 0.7s ease-in-out both;
     animation-delay: 0.06s;
-  }
-  
-  @keyframes rotate624 {
+}
+
+@keyframes rotate624 {
     0% {
-      transform: rotate(0deg) translate3d(0, 0, 0);
+        transform: rotate(0deg) translate3d(0, 0, 0);
     }
-  
+
     25% {
-      transform: rotate(3deg) translate3d(0, 0, 0);
+        transform: rotate(3deg) translate3d(0, 0, 0);
     }
-  
+
     50% {
-      transform: rotate(-3deg) translate3d(0, 0, 0);
+        transform: rotate(-3deg) translate3d(0, 0, 0);
     }
-  
+
     75% {
-      transform: rotate(1deg) translate3d(0, 0, 0);
+        transform: rotate(1deg) translate3d(0, 0, 0);
     }
-  
+
     100% {
-      transform: rotate(0deg) translate3d(0, 0, 0);
+        transform: rotate(0deg) translate3d(0, 0, 0);
     }
-  }
-  
-  @keyframes storm1261 {
+}
+
+@keyframes storm1261 {
     0% {
-      transform: translate3d(0, 0, 0) translateZ(0);
+        transform: translate3d(0, 0, 0) translateZ(0);
     }
-  
+
     25% {
-      transform: translate3d(4px, 0, 0) translateZ(0);
+        transform: translate3d(4px, 0, 0) translateZ(0);
     }
-  
+
     50% {
-      transform: translate3d(-3px, 0, 0) translateZ(0);
+        transform: translate3d(-3px, 0, 0) translateZ(0);
     }
-  
+
     75% {
-      transform: translate3d(2px, 0, 0) translateZ(0);
+        transform: translate3d(2px, 0, 0) translateZ(0);
     }
-  
+
     100% {
-      transform: translate3d(0, 0, 0) translateZ(0);
+        transform: translate3d(0, 0, 0) translateZ(0);
     }
-  }
-  
-  .btn-shine {
+}
+
+.btn-shine {
     border: 1px solid;
     overflow: hidden;
     position: relative;
     margin-top: 20px;
-  }
-  
-  .btn-shine span {
+}
+
+.btn-shine span {
     z-index: 20;
-  }
-  
-  .btn-shine:after {
+}
+
+.btn-shine:after {
     background: #38ef7d;
     content: "";
     height: 155px;
@@ -150,38 +179,41 @@ button {
     transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
     width: 50px;
     z-index: -10;
-  }
-  
-  .btn-shine:hover:after {
+}
+
+.btn-shine:hover:after {
     left: 120%;
     transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
-  }
+}
 
-  .div-button {
+.div-button {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+}
 
-  .input {
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+.input {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
     font-weight: 500;
     font-size: .8vw;
     color: #fff;
-    background-color: rgb(28,28,30);
-    box-shadow: 0 0 .4vw rgba(0,0,0,0.5), 0 0 0 .15vw transparent;
+    background-color: rgb(28, 28, 30);
+    box-shadow: 0 0 .4vw rgba(0, 0, 0, 0.5), 0 0 0 .15vw transparent;
     border-radius: 0.4vw;
     border: none;
     outline: none;
     padding: 15px;
     max-width: 190px;
     transition: .4s;
-  }
-  
-  .input:hover {
+}
+
+.input:hover {
     box-shadow: 0 0 0 .15vw rgba(135, 207, 235, 0.186);
-  }
-  
-  .input:focus {
+}
+
+.input:focus {
     box-shadow: 0 0 0 .15vw skyblue;
-  }
+}
+
+
+
